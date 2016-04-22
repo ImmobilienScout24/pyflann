@@ -25,11 +25,9 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from ctypes import *
-#from ctypes.util import find_library
 from numpy import float32, float64, uint8, int32, matrix, array, empty, reshape, require
 from numpy.ctypeslib import load_library, ndpointer
 import os
-from pyflann.exceptions import FLANNException
 import sys
 
 STRING = c_char_p

@@ -27,10 +27,10 @@
 from __future__ import with_statement
 
 from pyflann.exceptions import FLANNException
-import binary_dataset
-import dat_dataset
-import npy_dataset
-import hdf5_dataset
+from pyflann.io import binary_dataset
+from pyflann.io import dat_dataset
+from pyflann.io import npy_dataset
+from pyflann.io import hdf5_dataset
 
 import os.path
 from numpy import float32

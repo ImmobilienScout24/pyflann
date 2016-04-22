@@ -34,7 +34,6 @@ except ImportError:
     sys.stderr.write('See www.scipy.org/Weave for more information.')
     sys.exit(1)
 
-from string import split, join
 import os
 import numpy
 import struct
@@ -77,8 +76,8 @@ class CModule:
             name = force_name
         self.module = sys.modules[name]
         self.dest_dir = os.path.dirname(self.module.__file__)
-        
-        self._module_name = split(name,".")[-1]+"_c"
+
+        self._module_name = name.split(".")[-1] + "_c"
 
         # check to see if rebuild needed
         self.extension = ext_tools.ext_module(self._module_name)
@@ -92,9 +91,8 @@ class CModule:
             self.customize.add_extra_compile_arg('-Wno-write-strings')
             #self.customize.add_extra_compile_arg('-Wno-deprecated')
             #self.customize.add_extra_compile_arg('-Wno-unused')
-        
 
-    def get_name():
+    def get_name(self):
         return self._module_name
 
     def include(self,header):
@@ -162,7 +160,7 @@ class CStruct:
     
     def __init__(self, members):
         self.__members = members
-        format = join([ s for (s,_,_) in members],'')
+        format = "".join([ s for (s,_,_) in members])
         self.__struct_dict = dict( (v for (_,v,_) in members) )
         self.__translation_dict = dict( ( (k[0],v) for (_,k,v) in members if v != None))
         print(self.__translation_dict)
