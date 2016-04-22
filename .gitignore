@@ -4,3 +4,6 @@
 *.egg-info
 
 build
+dist
+
+pypi_conf.sh
