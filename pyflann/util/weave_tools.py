@@ -119,7 +119,7 @@ class CModule:
             defaults = [] if defaults==None else defaults
             if len(args) != len(defaults):
                 raise Exception("The %s function must have default values for all arguments"%name)
-            arg_tuples = zip(args,defaults) + list(varargs)
+            arg_tuples = list(zip(args,defaults)) + list(varargs)
             self.add_function(name,code,*arg_tuples)
             return func
         return decorate        

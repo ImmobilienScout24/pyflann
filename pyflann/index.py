@@ -26,6 +26,7 @@
 
 from pyflann.bindings.flann_ctypes import *
 from pyflann.io.dataset import *
+from numpy import mean
 import numpy.random as _rn
 
 

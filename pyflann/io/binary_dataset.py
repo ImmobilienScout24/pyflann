@@ -62,7 +62,7 @@ def load(filename, rows = -1, cols = -1, dtype = numpy.float32):
             dtype = numpy.dtype(fd.readline().strip())
     else:
         if rows==-1 or cols==-1:
-            raise "No .meta file present, you must specify dataset rows, cols asd dtype"
+            raise Exception("No .meta file present, you must specify dataset rows, cols asd dtype")
     data = numpy.fromfile(file=filename, dtype=dtype, count=rows*cols)
     data.shape = (rows,cols)
     return data
