@@ -14,5 +14,5 @@ setup(
     packages=['pyflann', 'pyflann.io', 'pyflann.bindings',
               'pyflann.util', 'pyflann.lib'],
     package_dir={'pyflann.lib': 'pyflann/lib'},
-    package_data={'pyflann.lib': ['linux/*.so']},
+    package_data={'pyflann.lib': ['darwin/*.dylib', 'linux/*.so']},
 )
