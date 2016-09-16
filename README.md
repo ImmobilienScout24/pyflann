@@ -1,6 +1,8 @@
 pyflann
 =============
 
+Modified to be python 3.x compatible
+
 ###1. Introduction
 
 pyflann is the python bindings for [FLANN - Fast Library for Approximate Nearest Neighbors](http://www.cs.ubc.ca/research/flann/).
