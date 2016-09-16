@@ -11,5 +11,5 @@ deploy:
   distributions: 'sdist'
   skip_cleanup: true
   on:
-    repo: Immobilienscout24/pyflann
+    repo: Immobilienscout24/pyflann3
     python: '3.5'
