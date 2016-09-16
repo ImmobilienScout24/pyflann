@@ -1,11 +1,7 @@
 sudo: false
 language: python
 python:
-  - '3.3'
-  - '3.4'
   - '3.5'
-  - "pypy"
-  - "pypy3"
 deploy:
   provider: pypi
   user: Immobilienscout24
@@ -15,5 +11,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: Immobilienscout24/pyflann
-    branch: stable
     python: '3.5'
