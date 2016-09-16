@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(
-    name='pyflann',
+    name='pyflann3',
     version='1.8.4',
     description='pyflann is the python bindings for FLANN - Fast Library for Approximate Nearest Neighbors.',
     author='Marius Muja & Gefu Tang',

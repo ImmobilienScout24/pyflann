@@ -1,0 +1,19 @@
+sudo: false
+language: python
+python:
+  - '3.3'
+  - '3.4'
+  - '3.5'
+  - "pypy"
+  - "pypy3"
+deploy:
+  provider: pypi
+  user: Immobilienscout24
+  password:
+    secure: "kf4C6CaxMX1+3k+sJgeA4qjWuJE68t2oJ5ajLWv4vAvciugIYAN1EEjTFE2VxfHJseGcpLnCOs6ISDhkfsAohRbpoYrN0kgN4sZqiWhLnN2q9Jf74uZ+wl5rsB3KPgjsZKkfhaNhCyJ7gY8UceJLdpBOJLerEuUacg6LLSY11N0ZRZp7qDWgt5rVZPALinnhI7yymT3NgJ4UkN4V7IXmip1ZZSQJlQrPu/htRSBkIEX5CLqqDTwq56NVvB+gWmT0oDgCZ5aOn4Avd5lrCLFB1rqDuyIYVkeGv1jDw//ULy35EVaHHYyHTwbFSyKvx+w15rjy+n3u5yiq7ytl25FdMOn7rzi02i3SpjMix7vLIu5wMMkomjd9eT68bV623bPp/hVhzgPZW3CQTFvsLMBcbXNPEc2xMVCrI79Wc0bhI6m+m6T7cw+7Og+bMQx0BH+KJZxTIWdd6rWLvpPGgabY8SDR01knIUvvuWxci6uwPt80ENF7R+Exm/CbII/w9mXOY78foY9gb/EgYMFUK/s+OPMgOTPnYYcfRkdaEe7pPgRsD8Sf3GpWKsDG3+QzM0CQ3ZjAKjH5rbbcJhUoxDqty4iZF7L2yEYMyA9tqHoIelVgIfSGWEC8n2nx1qq68ho2R/2HW/fH6GG78v0MGAfAJJr9IEhB5JJfKw/hB/Z6LhM="
+  distributions: 'sdist'
+  skip_cleanup: true
+  on:
+    repo: Immobilienscout24/pyflann
+    branch: stable
+    python: '3.5'
