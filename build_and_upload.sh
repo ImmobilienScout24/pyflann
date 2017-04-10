@@ -1,9 +1,22 @@
 #!/usr/bin/env bash
 set -e
 
-source pypi_conf.sh
+source ./pypi_conf.sh
 
-pip install devpi-client --index=$PYPI_INDEX_URL
-devpi use $PYPI_INDEX_URL
-devpi login $PYPI_USER --password=$PYPI_PASSWORD
-devpi upload --no-vcs
+# upload package to pypi
+if [ -n "$PYPI_USER" ] && [ -n "$PYPI_PASSWORD" ]; then
+    echo "Generating pypi auth config"
+    cat > ~/.pypirc << EOF
+[distutils]
+index-servers =
+    pypi
+
+[pypi]
+username:$PYPI_USER
+password:$PYPI_PASSWORD
+EOF
+fi
+
+cat ~/.pypirc
+
+python setup.py sdist upload
