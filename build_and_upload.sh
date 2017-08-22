@@ -19,4 +19,7 @@ fi
 
 cat ~/.pypirc
 
+echo $http_proxy
+echo $https_proxy
+
 python setup.py sdist upload
