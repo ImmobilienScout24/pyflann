@@ -12,6 +12,7 @@ index-servers =
     pypi
 
 [pypi]
+repository:$PYPI_REPO_URL
 username:$PYPI_USER
 password:$PYPI_PASSWORD
 EOF
@@ -19,7 +20,7 @@ fi
 
 cat ~/.pypirc
 
-echo $http_proxy
-echo $https_proxy
+python setup.py sdist
 
-python setup.py sdist upload
+twine upload dist/*
+
