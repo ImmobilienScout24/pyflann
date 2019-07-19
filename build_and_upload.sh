@@ -20,7 +20,7 @@ fi
 
 cat ~/.pypirc
 
-python setup.py sdist
+python setup.py sdist -d artifact
 
 twine upload dist/*
 

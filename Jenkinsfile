@@ -28,6 +28,7 @@ pipeline {
             steps {
                 sh 'pip install twine'
                 sh 'pip install --index-url=${PYPIPROXY_URL}'
+                sh 'python setup.py sdist -d artifact'
                 sh 'twine upload dist/*'
             }
             post {
