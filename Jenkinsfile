@@ -28,13 +28,8 @@ pipeline {
             steps {
                 sh 'pip install twine'
                 sh 'pip install --index-url=${PYPIPROXY_URL}'
-                sh 'python setup.py sdist -d artifact'
+                sh 'python setup.py sdist'
                 sh 'twine upload dist/*'
-            }
-            post {
-                always {
-                    junit 'target/reports/*.xml'
-                }
             }
         }
     }
