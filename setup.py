@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 from setuptools import setup
+import os
 
 setup(
     name='pyflann3',
-    version='1.8.4.1',
+    version=os.environ.get('VERSION', '1.8.4.1'),
     description='pyflann is the python bindings for FLANN - Fast Library for Approximate Nearest Neighbors.',
     author='Marius Muja & Gefu Tang',
     author_email='mariusm@cs.ubc.ca, tanggefu@gmail.com',

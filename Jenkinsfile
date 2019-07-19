@@ -9,7 +9,7 @@ pipeline {
     }
 
     environment {
-        INVOKED_BUILD_NUMBER=getInvokedBuildNumber()
+        VERSION=getInvokedBuildNumber()
         FAST_TOKEN=getFastToken()
         FAST_USER=getFastUser()
         TWINE_USERNAME=getFastUser()
